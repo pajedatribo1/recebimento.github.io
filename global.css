@@ -59,14 +59,32 @@ td {
 
 
 .table #containerCFOP1 {
+    display: flex;
+    flex-direction: column;
     float: left;
     text-align: center;
-    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5px;
 }
 
 .table #containerCFOP2 {
+    display: flex;
+    flex-direction: column;
     float: left;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5px;
+}
+
+.table #containerCFOP3 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     margin: 5px;
 }
 
