@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--  Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Filterable Table -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+    <link rel="stylesheet" href="global.css">
+
+    <link rel="shortcut icon" href="https://icons.getbootstrap.com/icons/receipt-cutoff.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+
+    <title>IC Transportes</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+        <h1 class="text-center texto">Matriz de Dados</h1>
+
+        <div class="alert alert-danger" id="texto1" role="alert" style="font-weight: bold;">
+            Custo
+        </div>
+
+        <div class="text-center">
+            <input type="text" class="searchInput text-center" id="myInput" placeholder="Search...">
+        </div>
+
+        <ul class="nav justify-content-center">
+            <li onmouseover="btnText('Custo')" onmouseout="btnText('Unidades')" class="w-5 p-2" class="nav-item">
+              <a class="nav-link active" href="index.html">Custo</a>
+            </li>
+            <li onmouseover="btnText('Despesa')" onmouseout="btnText('Unidades')" class="w-5 p-2" class="nav-item">
+              <a class="nav-link" href="desp.html">Despesa</a>
+            </li>
+            <li onmouseover="btnText('Ativo')" onmouseout="btnText('Unidades')" class="w-5 p-2" class="nav-item">
+              <a class="nav-link" href="ativo.html">Ativo</a>
+            </li>
+            <li onmouseover="btnText('CFOP')" onmouseout="btnText('Unidades')" class="w-5 p-2" class="nav-item">
+                <a class="nav-link" href="CFOP.html">CFOP</a>
+              </li>
+            </li>
+            <li onmouseover="btnText('Unidades')" onmouseout="btnText('Unidades')" class="w-5 p-2" class="nav-item">
+              <a class="nav-link" href="filiais.html">Unidades</a>
+            </li>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="table">
+          <table class="table table-striped table-white">
+            <!-- Primeiro Estado -->
+            <thead>
+              <tr>
+                <th>*</th><th>Unidades</th><th>Unidades Associadas</th><th>CNPJ</th><th>I.E</th><th>I.M.</th>
+              </tr>
+              <tr>
+                <th colspan="6">São Paulo</th>
+              </tr>
+            </thead>
+
+            <tbody id="myTable">
+
+              <tr>
+                <td>1</td><td>Sumaré</td><td>6/11/14/17/19/20/21/25/30/44/46/89/92/99</td><td>49.871.213/0001-88</td><td>671195894118</td><td></td>
+              </tr>
+              <tr>
+                <td>2</td><td>Santos</td><td></td><td>49.871.213/0005-01</td><td>633285463110</td><td></td>
+              </tr>
+              <tr>
+                <td>3</td><td>Guaruja</td><td></td><td>49.871.213/0006-92</td><td>335060990118</td><td></td>
+              </tr>
+              <tr>
+                <td>4</td><td>Cubatão</td><td>93</td><td>49.871.213/0007-73</td><td>283030215118</td><td></td>
+              </tr>
+              <tr>
+                <td>23</td><td>Jundiai</td><td>90</td><td>49.871.213/0014-00</td><td>407495550110</td><td></td>
+              </tr>
+              <tr>
+                <td>32</td><td>Cubatão BR</td><td></td><td>49.871.213/0016-64</td><td>283051018119</td><td></td>
+              </tr>
+              <tr>
+                <td>83</td><td>Igarapava</td><td></td><td>49.871.213/0027-17</td><td>349049362110</td><td></td>
+              </tr>
+              <tr>
+                <td>39</td><td>Mauá</td><td>42</td><td>49.871.213/0019-07</td><td>442.285.920.116</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Segundo Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Rio de Janeiro</th>
+              </tr>
+            </thead>
+
+            <tbody id="myTable">
+              <tr>
+                <td>27</td><td>Itaguai - Inativo</td><td>Inativo</td><td>49.871.213/0015-83</td><td>79273945</td><td></td>
+              </tr>
+              <tr>
+                <td>24</td><td>Rio de Janeiro</td><td>59/60/74</td><td>49.871.213/0013-11</td><td>78945249</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Terceiro Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Paraná</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>12</td><td>Araucária</td><td>5/35/47/54/94</td><td>49.871.213/0011-50</td><td>901.472.432-7</td><td></td>
+              </tr>
+              <tr>
+                <td>69</td><td>Paranaguá</td><td>88</td><td>49.871.213/0010-79</td><td>9077744069</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Quarto Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Goiás</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>9</td><td>Catalão</td><td>22/28/34/45/50/56</td><td>49.871.213/0009-35</td><td>10.205.046-5</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Quinto Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Minas Gerais</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>8</td><td>Araxá</td><td></td><td>49.871.213/0002-69</td><td>406369590277</td><td></td>
+              </tr>
+              <tr>
+                <td>7</td><td>Uberaba</td><td>10/13/15/16/18/33/36/41</td><td>49.871.213/0003-40</td><td>7016369590011</td><td></td>
+              </tr>
+              <tr>
+                <td>51</td><td>Contagem</td><td></td><td>49.871.213/0022-02</td><td>7016369590356</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Sexto Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Bahia</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>48</td><td>Luis Eduardo Magalhães</td><td></td><td>49.871.213/0020-40</td><td>117825394</td><td></td>
+              </tr>
+              <tr>
+                <td>38</td><td>Simões Filhos</td><td>43/53/62</td><td>49.871.213/0018-26</td><td>100381610</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Sétimo Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Sergipe</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>37</td><td>Laranjeiras</td><td></td><td>49.871.213/0017-45</td><td>27.135.36.78</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Oitavo Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Pernambuco</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>52</td><td>Jaboatão dos Guararapes</td><td>63/71</td><td>49.871.213/0021-21</td><td>62987372</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Nono Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Rio Grande do Sul</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>55</td><td>Eldorado do Sul</td><td>57/58/61/66</td><td>49.871.213/0023-93</td><td>024.048.762-1</td><td></td>
+              </tr>
+            </tbody>
+            
+            <!-- Décimo Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Maranhão</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>64</td><td>Imperatriz</td><td></td><td>49.871.213/0024-74</td><td>124405464</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Décimo-Primeiro Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Santa Catarina</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>64</td><td>Araquari</td><td>70/72/86</td><td>49.871.213/0025-55</td><td>258656034</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Décimo-Segundo Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Mato Grosso</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>73</td><td>Rondonopolis</td><td>75/76/77/78/79/80/81/82/84</td><td>49.871.213/0026-36</td><td>137604068</td><td></td>
+              </tr>
+            </tbody>
+
+            <!-- Décimo-Terceiro Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Pará</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>85</td><td>Itaituba</td><td>87</td><td>49.871.213-0028-06</td><td>157234290</td><td></td>
+              </tr>
+            </tbody>  
+            
+            <!-- Décimo-Quarto Estado -->
+            <thead>
+              <tr>
+                <th colspan="6">Espírito Santo</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>91</td><td>Espírito Santo</td><td></td><td>49.871.213/0029-89</td><td>83779639</td><td></td>
+              </tr>
+            </tbody>                 
+
+          </table>
+        </div>
+
+            <footer><span>Powered by @isaelsantos0</span></footer>
+
+    <script type="module" src="app.js"></script>
+    <script src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
